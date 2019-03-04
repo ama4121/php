@@ -12,12 +12,24 @@
 foreach($names as $index => $name){
     echo"<li>hello $name</li>";
 };
-
 ?>
+
+<ul>
+    <?php foreach ($tasks as $task) : ?>
+    <li><?= $task->getDescription(); ?></li>
+    <li><?= $task->getTel(); ?></li>
+    <?php if ($task->getCompleted()) : ?>
+        <li><strike><?= $task->getCompleted(); ?></strike></li>
+    <?php endif;?>
+    <?php endforeach; ?>
+
+</ul>
+
+
 
 
 <?php foreach ($names as $name) : ?>
 <li><?="hello, $name"?></li>
-<?php endforeach ?>
+<?php endforeach; ?>
 </body>
 </html>
