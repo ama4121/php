@@ -11,9 +11,9 @@
 
 <ul>
     <?php foreach ($tasks as $task) : ?>
-    <li><?= $task->getDescription(); ?></li>
-    <?php if ($task->getCompleted()) : ?>
-        <li><strike><?= $task->getCompleted(); ?></strike></li>
+    <li><?= $task->description ?></li>
+    <?php if ($task->completed) : ?>
+        <li><strike><?= $task->completed; ?></strike></li>
     <?php endif;?>
     <?php endforeach; ?>
 

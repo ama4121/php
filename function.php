@@ -10,10 +10,6 @@ if (!function_exists('dd')){
             var_dump($value);
             echo "</pre>";
         }
-
         exit(1);
-
-
-
     }
 }

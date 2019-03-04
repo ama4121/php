@@ -1,15 +1,7 @@
 <?php
-require  'Task.php';
-require  'function.php';
 
-
-$PDO = new PDO('mysql:host=127.0.0.1;dbname=phpstudy','root','sm94630719');
-$statement = $PDO->prepare('select * from tasks');
-$statement ->execute();
-
-$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
-
-
+$queryBuilder = require 'bootstrap.php';
+$tasks = $queryBuilder->selectAll('tasks');
 
 
 
