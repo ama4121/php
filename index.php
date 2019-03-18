@@ -1,14 +1,23 @@
 <?php
 
-$queryBuilder = require 'bootstrap.php';
-$tasks = $queryBuilder->selectAll('tasks');
+require 'core/bootstrap.php';
+
+
+require Router::load('routes.php')->direct(Request::uri());
 
 
 
-/*public -> 어디서나 접근 가능 변수
-protected -> 상속받은 클래스와 현재 클래스에서만 접근 가능
-private -> 현재 클래스에서만 접근 가능*/
-/* class 이름은 앞글쟈 대문자로!*/
+/*
+    instance method  호출 방법
 
-require 'index.view.php';
-?>
+    $router = new Router();
+    require $router->load();
+
+ */
+
+
+
+
+//dd($routes[trim($_SERVER['REQUEST_URI'],'/')]);
+
+//trim($_SERVER['REQUEST_URI'],'/');

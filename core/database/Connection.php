@@ -1,6 +1,6 @@
 <?php
 
-class connection
+class Connection
 {
     /*
      *
@@ -16,12 +16,7 @@ class connection
     public static function make($config)
     {
         try {
-            return new PDO(
-                "{$config['connection']};dbname={$config['name']}",
-                $config['username'],
-                $config['password'],
-                $config['options']
-            );
+            return new PDO("{$config['connection']};dbname={$config['name']}", $config['username'], $config['password'], $config['options']);
         } catch (PDOException $exception) {
             $exception->getMessage();
         }

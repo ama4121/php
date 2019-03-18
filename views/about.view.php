@@ -10,12 +10,13 @@
 <body>
 
 <ul>
-    <?php foreach ($tasks as $task) : ?>
-    <li><?= $task->description ?></li>
-    <?php if ($task->completed) : ?>
-        <li><strike><?= $task->completed; ?></strike></li>
-    <?php endif;?>
-    <?php endforeach; ?>
+    <li><a href="/">index page</a></li>
+    <li><a href="/about">about page</a></li>
+    <li><a href="/about-culture">about-culture page</a></li>
+    <li><a href="/contact">contact page</a></li>
+</ul>
+
+<h1>about us</h1>
 
 
 
