@@ -1,4 +1,7 @@
 <?php
+
+namespace App;
+
 class Task {
     public $description;
     public $completed;

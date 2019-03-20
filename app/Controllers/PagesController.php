@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controllers;
+
+
 class PagesController
 {
     public function home()
@@ -19,9 +22,4 @@ class PagesController
         return view('contact');
     }
 
-    public function tasks()
-    {
-        $tasks = App::get('database')->selectAll('tasks');
-        return view('tasks', compact('tasks'));
-    }
 }
