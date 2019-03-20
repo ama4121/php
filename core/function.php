@@ -1,4 +1,10 @@
 <?php
+function view($name, $data = []){
+    extract($data);
+    require "views/{$name}.view.php";
+
+}
+
 if (!function_exists('dd')){
     function dd ($data, ...$otherData){
         echo "<pre>";
@@ -12,4 +18,8 @@ if (!function_exists('dd')){
         }
         exit(1);
     }
+}
+
+function redirect($path){
+    header("Location:{$path}");
 }
